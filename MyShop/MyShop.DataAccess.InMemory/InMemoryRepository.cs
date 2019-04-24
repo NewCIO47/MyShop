@@ -14,8 +14,7 @@ namespace MyShop.DataAccess.InMemory
         ObjectCache cache = MemoryCache.Default;
         List<T> items;
         string className;
-
-
+        
         public InMemoryRepository()
         {
             className = typeof(T).Name;
@@ -50,7 +49,7 @@ namespace MyShop.DataAccess.InMemory
             }
         }
 
-        public  T Find(string Id)
+        public T Find(string Id)
         {
             T t = items.Find(i => i.Id == Id);
 
