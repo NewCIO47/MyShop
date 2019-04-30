@@ -6,6 +6,8 @@ using System.Web.Mvc;
 
 namespace MyShop.WebUI.Controllers
 {
+    [Authorize(Roles ="ADMIN")]
+    //[Authorize(Users = "DarkRock@gmail.com")]
     public class AdminController : Controller
     {
         // GET: Admin
